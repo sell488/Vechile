@@ -11,6 +11,7 @@ public class Vehicle {
         boolean done = false;
         while (!done)
         {
+
             num++;
             System.out.println("enter the make");
             String make = in.nextLine();
@@ -23,8 +24,8 @@ public class Vehicle {
             System.out.println("enter the list price");
             int listPrice = in.nextInt();
             String dummy = in.nextLine();
-            Vehicle car = new Vehicle(make, model, cityMPG, hwyMPG, listPrice);
-            carList.add(car);
+            VehicleCon test = new VehicleCon(make, model, cityMPG, hwyMPG, listPrice);
+            carList.add(test);
             if (num < 5)
             {
                 System.out.println("do you wish to add another car? yes or no");
@@ -42,6 +43,7 @@ public class Vehicle {
         System.out.print('\f');
         for (Vehicle a : carList)
         {
+
             System.out.println();
             System.out.println("car Number " + carNumber);
             System.out.println("make: " + a.getMake());

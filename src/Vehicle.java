@@ -6,7 +6,7 @@ public class Vehicle {
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
-        ArrayList<Vehicle> carList = new ArrayList<Vehicle>();
+        ArrayList<VehicleCon> carList = new ArrayList<VehicleCon>();
         int num = 0;
         boolean done = false;
         while (!done)
@@ -22,10 +22,10 @@ public class Vehicle {
             System.out.println("enter the highway mpg");
             int hwyMPG = in.nextInt();
             System.out.println("enter the list price");
-            int listPrice = in.nextInt();
+            int ListPrice = in.nextInt();
             String dummy = in.nextLine();
-            VehicleCon test = new VehicleCon(make, model, cityMPG, hwyMPG, listPrice);
-            carList.add(test);
+            VehicleCon car = new VehicleCon(make, model, cityMPG, hwyMPG, ListPrice);
+            carList.add(car);
             if (num < 5)
             {
                 System.out.println("do you wish to add another car? yes or no");
@@ -41,7 +41,7 @@ public class Vehicle {
         }
         int carNumber = 1;
         System.out.print('\f');
-        for (Vehicle a : carList)
+        for (VehicleCon a : carList)
         {
 
             System.out.println();
